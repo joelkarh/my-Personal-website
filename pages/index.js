@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Karhamba Portfolio</title>
         <meta name="description" content="A Personal website made by Karhamba" />
-        <link rel="icon" href="letter-j/.ico" />
+        <link rel="icon" href='icon.ico' /> 
       </Head>
         <section className=" container first_section ">
           <div className="row">

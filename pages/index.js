@@ -13,10 +13,10 @@ export default function Home() {
         <meta name="description" content="A Personal website made by Karhamba" />
         <link rel="icon" href='icon.ico' /> 
       </Head>
-        <section className=" container first_section ">
+        <section className=" container first_section  ">
           <div className="row">
-          <article className=" first__Article col-md-12 col-lg-6">
-            <p>Development that makes you say...</p>
+          <article className=" first__Article col-md-12 col-lg-6 p-4">
+            <p className='mb-28'>Development that makes you say...</p>
             <h2 className='mb-28'>Karhamba!</h2>
             <h3 className='mb-28'>Full stack developer</h3>
             <p>I am a self-taught full stack developer who can build your project.
@@ -27,7 +27,7 @@ export default function Home() {
               </div>
           </article>
           <div className="col-md-12 col-lg-6">
-          <ImageProfile_1 className=' '/>
+          <ImageProfile_1 />
           </div>
           </div>
         </section>

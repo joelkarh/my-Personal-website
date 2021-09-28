@@ -1,0 +1,22 @@
+$titleFont : "Poppins",sans-serif;
+$main-Bg: #0C0B0B;
+$mainColor:#fff;
+.Heading{
+    font-family: $titleFont;
+    font-weight: 800;
+    line-height: 28.85px;
+    margin-top: 3rem;
+
+}
+.mainBg{
+    background-color:$main-Bg;
+}
+.whiteText{
+    color: $mainColor !important;
+}
+.font__LG{
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+

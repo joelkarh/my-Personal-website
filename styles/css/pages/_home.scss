@@ -1,0 +1,129 @@
+/**
+* Homepage
+*/
+$titleFont : "Poppins",sans-serif;
+$main-Bg: #0C0B0B;
+$orange: #FF7700;
+$black:#0C0B0B;
+$greyish: #CFCFCF;;
+
+.first_section{
+    padding: 1rem;
+}
+.first__Article{
+
+    p:nth-child(odd){
+        font-weight: 700;
+        color: white;
+        line-height: 24px;
+    }
+    h2{
+        font-weight:800;
+        font-size: 2.02rem;
+        color: $orange;
+        line-height: 130%;
+    }
+    h3{
+        color: $greyish;
+        font-weight: 600;
+        line-height: 21px;
+    }
+    p:nth-child(even){
+        color: $greyish;
+        font-weight: 400;
+        line-height: 180.3%;
+    }
+    .button_1{
+        background-color:#7D7B7B;
+        font-weight: 700;
+        font-size: 0.875rem;
+        padding:  15px 40px;
+        text-transform: uppercase;
+        &:hover{
+            background-color:$orange;
+        }
+    }
+    .button_2{
+        font-weight: 400;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+    }
+
+}
+
+.image_2{
+    margin-left: 52px;
+    margin-right: 52px;
+}
+.profile__image_1{
+    margin-top: 58px;
+}
+
+@media  screen and (min-width: 768px){
+    .first__Article{
+        max-width: 460px;
+        justify-content: center;
+        p:nth-child(odd){
+            font-size: 2.25rem;
+            line-height:3.375rem;
+            &:nth-child(even){
+                font-weight: 600;
+            }
+        }
+
+        h2{
+            font-size:3.333rem;
+            line-height: 4.06rem;
+        }
+        h3{
+            font-size:1.125rem;
+        }
+    }
+    .first_section{
+        margin-top: 151px;
+        
+    }
+    .image_1{
+        img{
+            width:588.8px;
+        }
+    }
+    .image_2{
+        img{
+            width:330px;
+            height:450px;
+        }
+    }
+    .mb-28{
+        margin-bottom: 28.82px;;
+    }
+}
+@media  screen and (min-width: 1024px){
+    .first_section{
+        margin-top: 100px;
+        
+        .row{
+            justify-content: space-between;
+        }
+        .profile__image_1{
+            margin-top: 0px;
+        }
+    }
+    .image_1{
+        margin-top: -73px;
+        img{
+            width:494px;
+            
+        }
+    }
+    .image_2{
+        img{
+            width:fit-content;
+            
+        }
+    }
+    .first__Article{
+        max-width: 499px;
+        margin-top: -25px;
+    }
+}

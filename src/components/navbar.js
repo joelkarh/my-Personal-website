@@ -1,19 +1,18 @@
 import HamburgerIcon from "./hamburgerIcon"
 import styles from './navbar.module.scss'
 import Link from 'next/link';
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 const Navbar = () => {
     const [toggle,
-        setTogggle] = useState(false);
-
+        setTogggle] = useState(false);  
     const handleClick = () => {
         setTogggle(!toggle);
         console.log(toggle);
-    }
+    } 
     return (
-        <nav className={`${styles.mainBg}`}>
-            <div className="container navsection d-inline-block d-md-flex position-relative">
+        <nav className='col-12'>
+            <div className="navsection d-inline-block d-md-flex position-relative">
                 <span
                     className={`d-block mb-0  text-center text-md-start  brand text-white ${styles.Heading}`}>Karhamba
                 </span>
@@ -27,14 +26,21 @@ const Navbar = () => {
                     <span href='/' className={`logo text-white ${styles.Heading}`}>Karhamba</span> 
                     <ul className="nav_list">   
                     <li><Link href="/">Home</Link></li>
-                    <li><Link  href="/">About</Link></li>
+                    <li><Link  href="/about">About</Link></li>
                     <li><Link href="/">Contact</Link></li>
                     <li><Link  href="/">Projects</Link></li>
                     </ul>
                     
                 </div>
             </div>
-            
+            <style jsx>{` 
+            @media  (min-width: 768px){
+                .nav_list > li :hover{
+                    color:#fff;
+                }
+            }
+                `}
+            </style>
         </nav>
 
     )

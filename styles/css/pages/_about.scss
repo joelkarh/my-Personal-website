@@ -2,3 +2,105 @@
 * About page styles
 */
 
+
+
+$titleFont : "Playfair Display",sans-serif;
+$titleFont_2: " Poppins",sans-serif;
+$orange: #FF7700;
+$black:#3C3A3A;
+.second__Article{
+font-family: $titleFont_2;
+color: $black;
+    h1,
+    h2{
+        font-size:2rem;
+        line-height: 43px;
+    }
+    h1{
+        font-family:$titleFont ;
+        font-weight: 400;
+        font-style: italic;
+        
+    }
+    h2{
+        font-weight: 800;
+        text-transform: uppercase;
+        color:$orange ;
+        span{
+            color:$black;
+        }
+    }
+    .contacts{
+        color: $black;
+        font-weight: 700;
+        font-size:.875rem;
+        line-height: 2.3rem;
+        a{
+            margin-left: 10px;
+        }
+    }
+    
+    
+}
+
+.image_3{
+    margin-left:-40px;
+    position: relative;
+    overflow:hidden
+}
+
+.bar{
+    position: absolute;
+    width: 66px;
+    height: 98.5%;
+    left: 42%;
+    z-index: 3;
+    background: rgba(255, 119, 0, 0.42);
+}
+//media queries variables
+
+@media  screen and (min-width: 768px){
+    .contacts{
+        a:hover{
+            color: #FF7700 !important;
+        }
+    }
+    
+    .image_3_1{
+        width: 400px;
+        height:700px;
+       
+    }
+}
+@media  screen and (min-width: 1024px){
+    
+    .contacts{
+        display:flex;
+        .number{
+            margin-right: 30px;
+        }
+    }
+    
+    .image_About{
+        justify-content: center !important;
+    }
+    .second__Article{
+        position:relative;
+    }
+    .image_4{
+        position: absolute;
+        left: 65px;
+        top: 500px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row !important;
+        width: 15%;
+        padding: 0rem;
+    }
+
+}
+@media  screen and (min-width: 1500px){
+    .image_4{
+        left:330px;
+    }
+}

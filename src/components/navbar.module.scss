@@ -1,15 +1,19 @@
 $titleFont : "Poppins",sans-serif;
 $main-Bg: #0C0B0B;
 $mainColor:#fff;
+$orange: #FF7700;
 .Heading{
     font-family: $titleFont;
     font-weight: 800;
     line-height: 28.85px;
     margin-top: 3rem;
-
 }
+
 .mainBg{
     background-color:$main-Bg;
+}
+.main-BgW{
+    background-color:$mainColor;
 }
 .whiteText{
     color: $mainColor !important;

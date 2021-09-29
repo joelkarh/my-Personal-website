@@ -9,8 +9,9 @@ a{
 @import '~bootstrap/scss/bootstrap.scss';
 
 $titleFont : "Poppins",sans-serif;
-$main-Bg: #0C0B0B;
+$mainBg: #0C0B0B;
 $orange: #FF7700;
+$mainColor: #fff;
 $black:#0C0B0B;
 
 
@@ -26,12 +27,17 @@ html,
 body {
   font-family: $titleFont, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: $main-Bg;  
+  // background-color: $main-Bg;  
   line-height: 1.6;
   font-size: 16px;
 }
 
-
+.mainBg{
+  background-color:$mainBg;
+}
+.main-BgW{
+  background-color:$mainColor;
+}
 
 
 nav{
@@ -43,6 +49,7 @@ nav{
     width: 100vw;
     margin-left: -14px;
     z-index: 4;
+    position: relative;
     ul {
       list-style:none;
       margin:0 !important;
@@ -83,7 +90,7 @@ nav{
 .box{
     position: absolute;
     right: 5%;
-    top: 40px;
+    top: 35px;
     cursor: pointer;
     z-index: 5;
     padding: 1rem;
@@ -129,11 +136,11 @@ nav{
 
 .translate__Y{
   transform: translateY(-200%);
-  transition: all .4s ease-out;
+  transition: all 1.5s ease-out;
 }
 .translate__Y_open{
   transform: translateY(-28%);
-  transition: all .4s ease-out;
+  transition: all .5s cubic-bezier(.17,.67,.83,.67);
 }
 
 @media  screen and (min-width: 768px){
@@ -163,9 +170,7 @@ nav{
       background-color: transparent;
       text-transform: none;
       font-weight: 500;
-      & a:hover{
-        color:#fff !important;
-      }
+      
 
 }
     }

@@ -8,16 +8,16 @@ const ImageProfile_1 = () => {
             <Image 
             alt='image of a frame' 
             src={frame} 
-            width={341.33}
-            height={330.35} 
             objectFit='contain'/>
             </div>
             <div className="image_2 mt-5 mt-lg-0 position-absolute">
                 <Image  
                 src={ProfileImage}
                 alt=''
-                width={250}
-                height={353}
+                width={500}
+                height={600}
+                layout='intrinsic'
+                objectFit='contain'
                 />
                 </div>
         </div>

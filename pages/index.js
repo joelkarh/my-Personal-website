@@ -1,18 +1,19 @@
-import Head from 'next/head'
+
+// import Head from 'next/head';
+import { Helmet } from 'react-helmet'
 import Link from 'next/link'
-import Image from 'next/image'
 import Layout from '../src/components/layout'
-import styles from '../styles/Home.module.scss'
 import ImageProfile_1 from '../src/components/imageProfile_1'
 
 export default function Home() {
   return (
-    <Layout className="container">
-      <Head>
+    <Layout className="">
+      <Helmet>
         <title>Karhamba Portfolio</title>
         <meta name="description" content="A Personal website made by Karhamba" />
         <link rel="icon" href='icon.ico' /> 
-      </Head>
+        <style>{'body { background-color: #0C0B0B; }'}</style>
+      </Helmet>
         <section className=" container first_section  ">
           <div className="row">
           <article className=" first__Article col-md-12 col-lg-6 p-4">

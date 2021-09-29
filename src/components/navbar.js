@@ -1,9 +1,11 @@
 import HamburgerIcon from "./hamburgerIcon"
+import { useRouter } from "next/router";
 import styles from './navbar.module.scss'
 import Link from 'next/link';
 import {useState, useEffect} from "react"
 
 const Navbar = () => {
+    const router = useRouter();
     const [toggle,
         setTogggle] = useState(false);  
     const handleClick = () => {
@@ -25,10 +27,10 @@ const Navbar = () => {
                     : 'translate__Y'} `}>
                     <span href='/' className={`logo text-white ${styles.Heading}`}>Karhamba</span> 
                     <ul className="nav_list">   
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link  href="/about">About</Link></li>
-                    <li><Link href="/">Projects</Link></li>
-                    <li><Link  href="/">Contact</Link></li>
+                    <li className={router.pathname == '/'? 'active' :''} ><Link href="/">Home</Link></li>
+                    <li className={router.pathname == '/about'? 'active_2' :''}><Link  href="/about">About</Link></li>
+                    <li className={router.pathname == '/projects'? 'active_2' :''}><Link href="/">Projects</Link></li>
+                    <li className={router.pathname == '/contact'? 'active_2' :''}><Link  href="/">Contact</Link></li>
                     </ul>
                     
                 </div>

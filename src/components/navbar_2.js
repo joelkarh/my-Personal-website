@@ -2,7 +2,9 @@ import HamburgerIcon from "./hamburgerIcon"
 import styles from './navbar.module.scss'
 import Link from 'next/link';
 import {useState} from "react"
+import { useRouter } from "next/router";
 const Navbar_2 = () => {
+    const router = useRouter();
     const [color, setColor] = useState('#3C3A3A')
     const [toggle,
         setTogggle] = useState(false);  
@@ -25,10 +27,10 @@ const Navbar_2 = () => {
                 : 'translate__Y'} `}>
                 <span href='/' className={`logo text-white ${styles.Heading}`}>Karhamba</span> 
                 <ul className="nav_list">   
-                <li><Link href="/">Home</Link></li>
-                <li><Link  href="/about">About</Link></li>
-                <li><Link href="/">Projects</Link></li>
-                <li><Link  href="/">Contact</Link></li>
+                <li className={router.pathname == '/'? 'active_2' :''} ><Link href="/">Home</Link></li>
+                <li className={router.pathname == '/about'? 'active_2' :''}><Link  href="/about">About</Link></li>
+                <li className={router.pathname == '/projects'? 'active_2' :''}><Link href="/">Projects</Link></li>
+                <li className={router.pathname == '/contact'? 'active_2' :''}><Link  href="/">Contact</Link></li>
                 </ul>
                 
             </div>
@@ -41,10 +43,11 @@ const Navbar_2 = () => {
         color: #FF7700;
         }
         @media  (min-width: 768px){
-            .nav_list >  li :hover{
+            .nav_list >  li hover{
             color:#3C3A3A !important;
         }   
-        }
+            
+        
         
       `}</style>
         

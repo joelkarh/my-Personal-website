@@ -27,8 +27,8 @@ const Navbar_2 = () => {
                 <ul className="nav_list">   
                 <li><Link href="/">Home</Link></li>
                 <li><Link  href="/about">About</Link></li>
-                <li><Link href="/">Contact</Link></li>
-                <li><Link  href="/">Projects</Link></li>
+                <li><Link href="/">Projects</Link></li>
+                <li><Link  href="/">Contact</Link></li>
                 </ul>
                 
             </div>

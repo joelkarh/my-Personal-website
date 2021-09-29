@@ -11,7 +11,7 @@ const About = () => {
     return (
         <Layout_2 >
             <Helmet>
-                <title>Karhamba Portfolio About</title>
+                <title>Karhamba Portfolio - About</title>
                 <meta name="description" content="A Personal website made by Karhamba"/>
                 <link rel="icon" href='icon.ico'/>
                 <style>

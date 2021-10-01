@@ -5,7 +5,7 @@ import {useState} from "react"
 import { useRouter } from "next/router";
 const Navbar_2 = () => {
     const router = useRouter();
-    const [color, setColor] = useState('#3C3A3A')
+    const [color] = useState('#3C3A3A')
     const [toggle,
         setTogggle] = useState(false);  
     const handleClick = () => {
@@ -14,7 +14,7 @@ const Navbar_2 = () => {
     } 
     return (
         <nav>
-        <div className=" navsection d-inline-block d-md-flex position-relative">
+        <div className=" navsection d-inline-block d-md-flex ">
             <span
                 className={`d-block mb-0  text-center text-md-start  brand  ${styles.Heading}`}>Karhamba
             </span>
@@ -29,7 +29,7 @@ const Navbar_2 = () => {
                 <ul className="nav_list">   
                 <li className={router.pathname == '/'? 'active_2' :''} ><Link href="/">Home</Link></li>
                 <li className={router.pathname == '/about'? 'active_2' :''}><Link  href="/about">About</Link></li>
-                <li className={router.pathname == '/projects'? 'active_2' :''}><Link href="/">Projects</Link></li>
+                <li className={router.pathname == '/posts'? 'active_2' :''}><Link href="/posts">Projects</Link></li>
                 <li className={router.pathname == '/contact'? 'active_2' :''}><Link  href="/">Contact</Link></li>
                 </ul>
                 
@@ -43,16 +43,15 @@ const Navbar_2 = () => {
         color: #FF7700;
         }
         @media  (min-width: 768px){
-            .nav_list >  li hover{
-            color:#3C3A3A !important;
+            {/* .nav_list >  li :hover{
+            color:#3C3A3A !important; */}
         }   
             
         
         
-      `}</style>
+    `}</style>
         
     </nav>
-    )
-}
+    )}
 
 export default Navbar_2

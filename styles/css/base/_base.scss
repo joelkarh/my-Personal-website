@@ -58,7 +58,7 @@ nav{
           font-size: 2.25rem;
           font-weight: 800;
           text-transform: uppercase;
-          height: 10vh;
+          height: 20vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -76,7 +76,7 @@ nav{
   }
   .logo{
         background-color:$orange;
-        height: 60px;
+        height: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -89,42 +89,39 @@ nav{
 
 .box{
     position: absolute;
-    right: 5%;
-    top: 35px;
+    right: 8.5%;
+    top: 4.5%;
     cursor: pointer;
     z-index: 5;
     padding: 1rem;
 
   .line{
-      // width: 28.31px;
       border-bottom: 2px solid white;
       position: absolute;
       top: 50%;
       right: 0;
       display:block;
-      transition: all .4s ease-out;
+      transition: all .4s ease-in;
       
 
       &::before{
           content: '';
-          // width: 32.5px;
           border-bottom: 2px solid white;
           position: absolute;
           top: 8px;
           right: 0;
-          transition: all .4s ease-out;
+          transition: all .4s ease-in;
           display:block;
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
       }
       &:after{
           content: '';
-          // width: 24.38px;
           border-bottom: 2px solid white;
           position: absolute;
           bottom: 5px;
           right: 0;
-          transition: all .4s ease-out;
+          transition: all .4s ease-in;
           display:block;
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       }
@@ -139,7 +136,7 @@ nav{
   transition: all 1.5s ease-out;
 }
 .translate__Y_open{
-  transform: translateY(-28%);
+  transform: translateY(-16%);
   transition: all .5s cubic-bezier(.17,.67,.83,.67);
 }
 
@@ -170,6 +167,7 @@ nav{
       background-color: transparent;
       text-transform: none;
       font-weight: 500;
+      height: unset;
       
       
 

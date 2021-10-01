@@ -1,9 +1,13 @@
 /**
 * Header styles
 */
-.active{
-    color: #fff !important;;
-}
-.active_2{
-    color:#3C3A3A  !important
+
+
+@media  (min-width: 768px) {
+    .active{
+        color: #fff !important;;
+    }
+    .active_2{
+        color:#3C3A3A  !important
+    }
 }

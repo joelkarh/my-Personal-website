@@ -14,7 +14,7 @@ const Navbar = () => {
     } 
     return (
         <nav className='col-12'>
-            <div className="navsection d-inline-block d-md-flex position-relative">
+            <div className="navsection d-inline-block d-md-flex ">
                 <span
                     className={`d-block mb-0  text-center text-md-start  brand text-white ${styles.Heading}`}>Karhamba
                 </span>
@@ -28,9 +28,9 @@ const Navbar = () => {
                     <span href='/' className={`logo text-white ${styles.Heading}`}>Karhamba</span> 
                     <ul className="nav_list">   
                     <li className={router.pathname == '/'? 'active' :''} ><Link href="/">Home</Link></li>
-                    <li className={router.pathname == '/about'? 'active_2' :''}><Link  href="/about">About</Link></li>
-                    <li className={router.pathname == '/projects'? 'active_2' :''}><Link href="/">Projects</Link></li>
-                    <li className={router.pathname == '/contact'? 'active_2' :''}><Link  href="/">Contact</Link></li>
+                    <li className={router.pathname == '/about'? 'active' :''}><Link  href="/about">About</Link></li>
+                    <li className={router.pathname == '/posts'? 'active' :''}><Link href="/posts">Projects</Link></li>
+                    <li className={router.pathname == '/contact'? 'active' :''}><Link  href="/">Contact</Link></li>
                     </ul>
                     
                 </div>

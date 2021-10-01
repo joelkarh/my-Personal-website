@@ -12,7 +12,6 @@ export default function Home() {
         <title>Karhamba Portfolio</title>
         <meta name="description" content="A Personal website made by Karhamba" />
         <link rel="icon" href='icon.ico' /> 
-        <style>{'body { background-color: #0C0B0B; }'}</style>
       </Helmet>
         <section className=" container first_section  ">
           <div className="row">

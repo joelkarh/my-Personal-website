@@ -1,16 +1,21 @@
 import Navbar from "./navbar";
-import {useState} from "react";
-import styles from './navbar.module.scss'
-
-
+import {Helmet} from "react-helmet";
 
 const Layout = ({children}) => {
-    // const [color, setColor] = useState(styles.mainBg);  
     return (
-        <div className="container" >
+        <div className="container">
+            <Helmet>
+                <title>Karhamba Portfolio</title>
+                <meta name="description" content="A Personal website made by Karhamba"/>
+                <link rel="icon" href='icon.ico'/>
+                <style>
+                    {
+                    'body { background-color: #0C0B0B; }'
+                    }</style>
+            </Helmet>
             <div className="row">
-            <Navbar/>
-            <main>{children}</main>
+                <Navbar/>
+                <main>{children}</main>
             </div>
         </div>
     )

@@ -1,11 +1,10 @@
-
-// import Head from 'next/head';
 import { Helmet } from 'react-helmet'
 import Link from 'next/link'
 import Layout from '../src/components/layout'
-import ImageProfile_1 from '../src/components/imageProfile_1'
+import ImageProfile_1 from '../src/components/imageProfile_1';
 
 export default function Home() {
+  
   return (
     <Layout className="">
       <Helmet>
@@ -34,3 +33,30 @@ export default function Home() {
     </Layout>
   )
 }
+
+
+
+// export const getStaticProps = async()=> {
+//   const res = await fetch(`${server}/api/articles`);
+//   const articles =await res.json();
+//   return{
+//     props: {
+//       articles
+//     }
+//   }
+  
+// }
+
+
+
+// export const getStaticProps = async()=> {
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
+//   const articles =await res.json();
+//   return{
+//     props: {
+//       articles
+//     }
+//   }
+  
+// }
+

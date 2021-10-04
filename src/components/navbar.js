@@ -29,7 +29,7 @@ const Navbar = () => {
                     <ul className="nav_list">   
                     <li className={router.pathname == '/'? 'active' :''} ><Link href="/">Home</Link></li>
                     <li className={router.pathname == '/about'? 'active' :''}><Link  href="/about">About</Link></li>
-                    <li className={router.pathname == '/posts'? 'active' :''}><Link href="/posts">Projects</Link></li>
+                    <li className={router.pathname == '/posts'? 'active' :''}><Link href="/projects">Projects</Link></li>
                     <li className={router.pathname == '/contact'? 'active' :''}><Link  href="/">Contact</Link></li>
                     </ul>
                     

@@ -1,40 +1,36 @@
-import Layout from '../src/components/layout'
-import {Helmet} from 'react-helmet'
-import {projectArticles} from '../public/data/projects'
-import { useState } from 'react'
-import Image from 'next/image'
-const Projects = () => {
-const [cards, setCards] = useState(projectArticles)
+import ProjectList from "../src/components/projectList";
+import { server } from "../config";
+
+
+
+const Projects = ({articles}) => {
+    console.log(articles)
     return (
-        <Layout>
-            <Helmet>
-                <title>Karhamba Portfolio</title>
-                <meta name="description" content="A Personal website made by Karhamba"/>
-                <link rel="icon" href='icon.ico'/>
-                <style>
-                    {
-                        'body { background-color: #0C0B0B; }'
-                    }</style>
-            </Helmet>
-            <div className="container projects">
-            <h1 className="text-white position-fixed">Recent projects</h1>
-                <div className="row">
-                    {cards.map(({id,title,image, text})=>(
-                    <article key={id}>
-                        <Image
-                        src={image}
-                        alt={title}
-                        objectFit='contain'
-                        width={500}
-                        height={600}
-                        />
-                        <p>{text}</p>
-                        </article>
-                    ))}
-                </div>
-            </div>
-        </Layout>
+        <>
+            <ProjectList articles={articles}/>
+        </>
     )
 }
 
 export default Projects
+export const getStaticProps = async() => {
+    const res = await fetch(`${server}/api/projects`);
+    const articles = await res.json();
+    return {
+        props: {
+            articles,
+        }
+    }
+}
+
+// export const getStaticProps = async() => {
+//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
+//     const articles = await res.json();
+//     return {
+//         props: {
+//             articles,
+//         }
+//     }
+// }
+
+
